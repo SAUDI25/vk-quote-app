@@ -1,0 +1,45 @@
+body {
+  font-family: 'Tahoma', sans-serif;
+  text-align: center;
+  margin: 50px;
+  background-color: #f0f0f0;
+  color: #222;
+  transition: 0.3s;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #0077ff;
+  color: white;
+}
+
+select {
+  padding: 5px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+#quote {
+  margin-top: 30px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+body.dark-mode {
+  background-color: #222;
+  color: #eee;
+}
+
+body.dark-mode button {
+  background-color: #444;
+}
+
+body.dark-mode select {
+  background-color: #444;
+  color: white;
+}

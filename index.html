@@ -1,34 +1,29 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>Мудрость дня</title>
-  <style>
-    body { font-family: Arial; text-align: center; margin-top: 100px; direction: rtl; }
-    button { padding: 10px 20px; font-size: 18px; }
-    #quote { margin-top: 30px; font-size: 22px; color: #333; }
-  </style>
+  <title>🧠 حكمة اليوم</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+  <script>vkBridge.send('VKWebAppInit');</script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1 id="title">🧠 حكمة اليوم</h1>
 
-  <h1>Получите случайную мудрость</h1>
-  <button onclick="showRandomQuote()">Показать мудрость</button>
+  <label for="languageSelect" id="languageLabel">اختر اللغة:</label>
+  <select id="languageSelect" onchange="changeLanguage()">
+    <option value="ar">العربية</option>
+    <option value="en">English</option>
+    <option value="zh">中文</option>
+    <option value="ru">Русский</option>
+  </select>
+
+  <button id="quoteButton" onclick="showQuote()">📜 اعرض حكمة</button>
+  <button id="darkModeButton" onclick="toggleDarkMode()">🌓 الوضع الداكن</button>
+
   <div id="quote"></div>
 
-  <script>
-    const quotes = [
-      "Ум — украшение человека.",
-      "Кто старается, тот добивается.",
-      "Не откладывай на завтра то, что можно сделать сегодня.",
-      "Терпение — ключ к успеху.",
-      "Знание — сила."
-    ];
-
-    function showRandomQuote() {
-      const randomIndex = Math.floor(Math.random() * quotes.length);
-      document.getElementById('quote').innerText = quotes[randomIndex];
-    }
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
